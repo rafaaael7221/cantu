@@ -37,7 +37,7 @@ def processar_validacao_cnpj(df_origem, log_callback):
         
         try:
             resposta = requests.get(url_api)
-            time.sleep(1) # Rate limit da BrasilAPI
+            time.sleep(5) # Rate limit da BrasilAPI
             
             if resposta.status_code != 200:
                 log_callback(pedido, cnpj_planilha, "erro_api", resposta.status_code)
