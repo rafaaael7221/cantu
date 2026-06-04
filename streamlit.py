@@ -5,8 +5,8 @@ import io
 from main import processar_validacao_cnpj
 
 # Configuração da página web
-st.set_page_config(page_title="Validador CNPJ - V7 Essential", layout="centered")
-st.title("Validador de CNPJ - Apenas Revenda (V7)")
+st.set_page_config(page_title="Validador CNPJ - Essential", layout="centered")
+st.title("Validador de CNPJ - Apenas Revenda")
 st.markdown("Arraste sua planilha do Hybris abaixo para analisar os CNAEs e puxar os endereços da Receita.")
 
 # Componente de Drag and Drop
@@ -62,9 +62,9 @@ if arquivo_enviado is not None:
                 
                 st.markdown("### Seu resultado está pronto!")
                 st.download_button(
-                    label="📥 Baixar Planilha de Resultados (V7 Essential)",
+                    label="📥 Baixar Planilha de Resultados - Essential",
                     data=buffer.getvalue(),
-                    file_name="resultado_essential_v7.xlsx",
+                    file_name="resultado_essential.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
                 
